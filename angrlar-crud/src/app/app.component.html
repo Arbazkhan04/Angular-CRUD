@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="card mt-5">
+        <h5 class="card-header user-reg-color">User Registration</h5>
+        <div class="card-body">
+            <form [formGroup]="userRegistration" (ngSubmit)="setUserRegistrationvalue()">
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <div class="form-group col">
+                            <label for="title">Title</label>
+                            <select class="form-control" formControlName="title">
+                                <option value="Mr">Mr</option>
+                                <option value="Mr">Mrs</option>
+                                <option value="Mr">Miss</option>
+                                <option value="Mr">Ms</option>
+                            </select>
+                        </div>
+                    </div>
+                  <div class="form-group col-5">
+                    <label class="col-4" for="firsTName">FirsTName</label>
+                    <input type="text" class="form-control"  formControlName="firstName">
+                  </div>
+                  <div class="form-group col-5">
+                    <label class="col-4" for="lastName">lastName</label>
+                    <input type="text" class="form-control"  formControlName="lastName">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                    
+                        <div class="form-group col-6" >
+                            <label for="dob">Date of birth</label>
+                            <input type="text" class="form-control" formControlName="dob">
+                        </div>
+                  
+                    
+                        <div class="form-group col-6" >
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" formControlName="email">
+                        </div>
+                   
+                </div>
+                <div class="row mt-3">
+                    
+                        <div class="form-group col-6" >
+                            <label for="password">Password</label>
+                            <input type="text" class="form-control" formControlName="password">
+                        </div>
+                  
+                    
+                        <div class="form-group col-6" >
+                            <label for="cPassword">Confirm Password</label>
+                            <input type="text" class="form-control" formControlName="confirmPassword">
+                        </div>
+                   
+                </div>
+                <div class="text-center mt-3 m-2">
+                    <button (click)="save()" type="submit" class="btn btn-primary">Save</button>
+                    <button (click)="cancel()" type="submit" class="btn btn-danger">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
